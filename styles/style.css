@@ -375,7 +375,7 @@ footer {
         text-align: left;
         margin-right: var(--space-lg);
     }
-    
+
 
     .day {
         font-size: 3.8rem;
@@ -439,15 +439,16 @@ footer {
 }
 
 @media (max-width: 609px) {
-    section {
-        padding: 2rem;
-        overflow: hidden;
-    }
 
     html,
     body {
         width: 100%;
         overflow-x: hidden;
+    }
+
+    section {
+        padding: 2rem;
+        overflow: hidden;
     }
 
     .hero {
@@ -457,37 +458,63 @@ footer {
     .hero-mobile {
         width: 100%;
         max-width: 100vw;
-        overflow: clip;
-        padding: 2rem 0 5rem 0;
+        overflow: hidden;
+        padding: 2rem 0 5rem;
         background: url(../assets/celular.jpg) center no-repeat;
         background-size: cover;
+
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
         text-align: center;
     }
 
-
     .hero-mobile .banner-mobile {
-        width: 100vw;
-        overflow: clip;
-        box-sizing: border-box;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: start;
+        width: 100%;
+        max-width: 100vw;
+        overflow: hidden;
 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
+    .hero-mobile .banner-mobile img {
+        width: min(120vw, 430px);
+        max-width: none;
+        transform: translateX(1.5rem);
+        display: block;
+    }
+
+    .hero-mobile .hero-content {
+        width: 100%;
+        padding: 0 1.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
     .hero-mobile .hero-info {
         margin-top: -2rem;
         display: flex;
         flex-direction: column;
         gap: var(--space-sm);
-        justify-content: center;
         align-items: center;
+        text-align: center;
+    }
+
+    .hero-mobile .event-date {
+        width: auto;
+        border-right: none;
+        border-bottom: 1px solid var(--white);
+        padding-bottom: 1rem;
+        margin: 0 auto;
+        padding-right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
     .day {
@@ -496,17 +523,28 @@ footer {
 
     .month {
         font-size: 2.4rem;
+        letter-spacing: 3px;
     }
 
     .subtitle {
+        max-width: 330px;
+        padding-left: 0;
         font-size: 1rem;
+        line-height: 1.4;
+        text-align: center;
+    }
+
+    .cta {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
     }
 
     .cta a {
         width: 100%;
         max-width: 320px;
     }
-
 
     .section-grid {
         grid-template-columns: 1fr;
